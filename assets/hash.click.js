@@ -29,8 +29,6 @@
         var data = doc.querySelector("[data-href='" + hashValue + "']");
         var aria = doc.querySelector("[aria-controls='" + hashValue.split('#')[1] + "']");
 
-        alert(hashValue);
-
         // set el to the appropriate element
         if ( link != null ) {
           el = link;
