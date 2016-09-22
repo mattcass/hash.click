@@ -1,11 +1,15 @@
-;(function ( $, w, doc ) {
+;(function ( w, doc ) {
 
   // Enable strict mode
   'use strict';
 
-  $('.btn').on('click', function () {
-    $('.box').attr('style', 'background: tomato;')
-  });
+  var button = document.getElementById('button');
+  var box    = document.getElementsByClassName('box')[0];
 
+  function changeBG() {
+    box.style.backgroundColor = 'tomato';
+  }
 
-})( jQuery, this, this.document );
+  button.addEventListener('click', changeBG);
+
+})( this, this.document );

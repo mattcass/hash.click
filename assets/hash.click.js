@@ -21,12 +21,13 @@
       // is there a #hash in the url?
       if ( w.location.hash ) {
 
-        var hashValue = w.location.hash,
-            el,
+        var hashValue = w.location.hash;
+        var el;
+
             // does the #hash match an attribute on the page?
-            link = doc.querySelector("a[href='" + hashValue + "']"),
-            data = doc.querySelector("[data-href='" + hashValue + "']"),
-            aria = doc.querySelector("[aria-controls='" + hashValue.split('#')[1] + "']");
+        var link = doc.querySelector("a[href='" + hashValue + "']");
+        var data = doc.querySelector("[data-href='" + hashValue + "']");
+        var aria = doc.querySelector("[aria-controls='" + hashValue.split('#')[1] + "']");
 
         alert(hashValue);
 
