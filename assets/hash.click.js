@@ -5,7 +5,7 @@
 * Repo: https://github.com/mattcass/hash.click
 */
 
-;(function ( $, w, doc ) {
+;(function ( w, doc ) {
 
   // Enable strict mode
   'use strict';
@@ -16,37 +16,37 @@
   ( function hashClick() {
 
     // wait for everything to be loaded
-    window.onload = function() {
+    w.onload = function() {
 
       // is there a #hash in the url?
-      if ( window.location.hash ) {
+      if ( w.location.hash ) {
 
-        // what is the #hash
-        var hashValue = window.location.hash;
-        var $el;
+        var hashValue = w.location.hash,
+            el,
+            // does the #hash match an attribute on the page?
+            link = doc.querySelector("a[href='" + hashValue + "']"),
+            data = doc.querySelector("[data-href='" + hashValue + "']"),
+            aria = doc.querySelector("[aria-controls='" + hashValue.split('#')[1] + "']");
 
-        // does the #hash match an attribute on the page?
+        alert(hashValue);
 
-        var $element = $("a[href='" + hashValue + "']"),
-            $data    = $("[data-href='" + hashValue.split('#')[1] + "']"),
-            $ariaControls = $("[aria-controls='" + hashValue.split('#')[1] + "']");
-
-        if ( $element != null ) {
-          $el = $element;
+        // set el to the appropriate element
+        if ( link != null ) {
+          el = link;
         }
-        if ( $data != null ) {
-          $el = $data;
+        if ( data != null ) {
+          el = data;
         }
-        if ( $ariaControls != null ) {
-          $el = $ariaControls;
+        if ( aria != null ) {
+          el = aria;
         }
 
-        $el.click();
+        el.click();
 
-      }// End if
+      } // End if
 
     } // End window.onload
 
   })();
 
-})( jQuery, this, this.document );
+})( this, this.document );
