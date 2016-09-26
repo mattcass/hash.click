@@ -1,0 +1,19 @@
+{
+  "name": "hash.click",
+  "version": "1.0.0",
+  "description": "Auto click an item that matches the #hash in the URL",
+  "main": "hash.click.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattcass/hash.click.git"
+  },
+  "author": "Matthew Casserly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattcass/hash.click/issues"
+  },
+  "homepage": "https://github.com/mattcass/hash.click#readme"
+}
