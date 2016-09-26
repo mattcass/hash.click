@@ -7,3 +7,7 @@ The script will check the elements with the following attributes and perform the
 * ```href```  
 * ```data-href```  
 * ```aria-controls```  
+
+```
+npm install hash.click 
+```
