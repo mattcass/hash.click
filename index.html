@@ -5,51 +5,40 @@
   <title>hash.click</title>
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
   <style>
-    .p2 {
-      padding: 2em;
-    }
-
-    .box {
-      width: 100px;
-      height: 100px;
-      background: #000;
-    }
-
-    .mb1 {
-      margin-bottom: 1em;
-    }
-
-    .page {
-      max-width: 500px;
-    }
-
+    .p2 { padding: 2em; }
+    .box { width: 100px; height: 100px;background: black; }
+    .mb1 { margin-bottom: 1em; }
+    .page { max-width: 500px; }
+    h1 { margin-bottom: 0; }
+    ul { padding: 0; margin: 0; list-style-type: none; display: flex; }
+    li { margin-right: 0.5em; }
   </style>
 </head>
 <body class="page p2">
-
   <header>
-
     <h1>hash.click.js</h1>
+    <ul>
+      <li>
+        <a href="https://www.npmjs.com/package/hash.click">NPM</a>
+      </li>
+      <li>
+        <a href="https://github.com/mattcass/hash.click">Github</a>
+      </li>
+    </ul>
     <p>Load a page, click a thing.</p>
-
   </header>
 
   <main>
-
     <p>  If you click the button, the block on this page will become red.  If you add #thing to the end of the URL and reload the page, the hash.click script will run and auto click the button, thus making the block red.</p>
     <button class="btn mb1" id="button" aria-controls="thing">
       Click Me
     </button>
-
     <div class="box">
     </div>
-
-
   </main>
 
   <script src="hash.click.js"></script>
   <script src="assets/app.js"></script>
-
 
 </body>
 </html>
